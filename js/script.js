@@ -22,15 +22,38 @@ console.log(playerNumber);
 const cpuNumber = Math.floor(Math.random() * 6) + 1;
 console.log(cpuNumber);
 
+let answer;
+
+
 if (playerNumber > cpuNumber){
     console.log("ha vinto il giocatore");
+    answer = "ha vinto il giocatore";
+
 
 } else if (cpuNumber > playerNumber){
     console.log("ha vinto il computer");
+    answer = "ha vinto il computer";
+
 
 } else{
     console.log('pareggio')
+    answer = "pareggio";
+
+
 }
+
+document.getElementById('playernumber').innerText = playerNumber;
+
+document.getElementById('cpunumber').innerText = cpuNumber;
+
+document.getElementById('result').innerText = answer;
+
+
+
+
+
+
+
 
 
 
