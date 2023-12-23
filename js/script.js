@@ -42,18 +42,66 @@ if (playerNumber > cpuNumber){
 
 }
 
-document.getElementById('playernumber').innerText = playerNumber;
+document.getElementById('playernumber').innerText = `Numero del giocatore: ${playerNumber}`;
 
-document.getElementById('cpunumber').innerText = cpuNumber;
+document.getElementById('cpunumber').innerText = `Numero del computer: ${cpuNumber}`;
 
-document.getElementById('result').innerText = answer;
-
-
+document.getElementById('result').innerText = `Vincitore = ${answer}`;
 
 
 
+// Esercizio 2 Login
 
 
+/*
+1 - creare la lista di email autorizzate
+    AL CLICK DEL BOTTONE:
+    2 - salvare l'email dell'utente in una variabile
+    3 - creare una variabile allowed = false
+    3 - creare un ciclo (i = 0; i < lista.length && allowed = false; i++)
+        stampa la mail controllata
+        4 - se l'email dell'utente è uguale alla mail della lista
+            stampa un messaggio "email verificata"
+        
+
+*/
+
+
+const emailList = ["hosaga2293@wenkuu.com", "xodaxi1314@wikfee.com" , "deneje8128@wenkuu.com", "fetino1532@wikfee.com" , "hayovak624@wikfee.com" , "fodiwed474@wikfee.com" , "yaxefi5726@watrf.com" , "tariwi2312@vkr1.com" , "loxes49954@watrf.com" , "malaf53355@watrf.com"]
+
+const button = document.getElementById("button");
+
+const emailInput = document.getElementById("emailinput");
+
+button.addEventListener ('click', function() {
+
+    const input = emailInput.value.trim();
+
+    let isUserAllowed = false;
+
+    for (i = 0; i < emailList.length && isUserAllowed === false; i++){
+        console.log(emailList[i]);
+        console.log(input);
+        console.log("-----------------------------------")
+
+        
+
+        if (input === emailList[i]){
+            isUserAllowed = true
+            console.log("email trovata");
+        }
+
+
+    }
+
+
+
+
+
+
+
+    
+})
 
 
 
