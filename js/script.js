@@ -69,9 +69,11 @@ document.getElementById('result').innerText = `Vincitore = ${answer}`;
 
 const emailList = ["hosaga2293@wenkuu.com", "xodaxi1314@wikfee.com" , "deneje8128@wenkuu.com", "fetino1532@wikfee.com" , "hayovak624@wikfee.com" , "fodiwed474@wikfee.com" , "yaxefi5726@watrf.com" , "tariwi2312@vkr1.com" , "loxes49954@watrf.com" , "malaf53355@watrf.com"]
 
-const button = document.getElementById("button");
 
+const button = document.getElementById("button");
 const emailInput = document.getElementById("emailinput");
+const resultElement = document.getElementById("resultelement");
+
 
 button.addEventListener ('click', function() {
 
@@ -87,12 +89,24 @@ button.addEventListener ('click', function() {
         
 
         if (input === emailList[i]){
-            isUserAllowed = true
+            isUserAllowed = true;
             console.log("email trovata");
+
         }
 
+    }
+
+    if (isUserAllowed){
+        button.classList.add('d-none');
+        emailInput.classList.add('d-none');
+        resultElement.innerText = "Benvenuto";
+
+    }else{
+        emailInput.classList.add("is-invalid");
+        resultElement.innerText = "Non sei autorizzato";
 
     }
+
 
 
 
